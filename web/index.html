@@ -9,21 +9,28 @@ and open the template in the editor.
         <title>Open Source</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+
+<!-- Latest compiled and minified JavaScript -->
+
         <script type="text/javascript"  src="script.js"></script>
        <link href="style.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
-        <div>Open Source</div>
-        <select id ="myDropDown" onchange="gethiddenField()">
+    <body><div class="container">
+        <h1>Demo</h1><br/><br/>
+        <select id ="myDropDown" class="form-control" onchange="gethiddenField()">
             <option value="" selected="selected">--Choose--</option>
             <option value="My name">My name</option>
             <option value="My name">My name</option>
             <option value="My name">My name</option>
             <option value="Others">Others</option>
-        </select>
+        </select><br/>
           <div id = "hiddenField">
-                        <input type="text" id="others1" name ="others1" placeholder="Others (Specify)">
+              <input type="text" class="form-control"  placeholder="Others (Specify)">
                     </div>
+        </div>
     </body>
 </html>
