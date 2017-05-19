@@ -24,8 +24,40 @@ Then you are good to go.
 
 Create a div element and give it an id of "hiddenField" and inside the div element create your input type of text.
 
+OPTIONAL
+
+It is fine to import Bootstrap to improve the User Interface.
+
 NB:
 
 This plugin is in it's early version, together we can make it mindblowing. 
 
 Cheers guys!!!
+
+CODE SAMPLE
+
+```<h1>Demo</h1><br/><br/>
+        <select id ="myDropDown" class="form-control" onchange="gethiddenField()">
+            <option value="" selected="selected">--Choose--</option>
+            <option value="My name">My name</option>
+            <option value="My name">My name</option>
+            <option value="My name">My name</option>
+            <option value="Others">Others</option>
+        </select><br/>
+          <div id = "hiddenField">
+              <input type="text" class="form-control"  placeholder="Others (Specify)">
+                    </div>```
+
+JAVASCRIPT
+
+function gethiddenField() {
+    var others = document.getElementById('myDropDown');
+    var y = others.options[others.selectedIndex].value;
+    if (y === "Others") {
+        var field = document.getElementById("hiddenField").style.display = "block";
+        field.type = 'text';
+    } else if (y !== "Others") {
+        var field = document.getElementById("hiddenField").style.display = "none";
+    }
+}
+
